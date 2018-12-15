@@ -40,8 +40,16 @@ blockquote{
 
 .col1of3, .col2of3, .col3of3{
 
-    width: 28.33%;
+    width: 70%;
     padding: 2.5%;
     float: left;
 
 }
+
+
+
+.col2of3{
+    width: 20%
+}
+
+
