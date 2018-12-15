@@ -1,0 +1,93 @@
+/* td {
+    border: 1px solid #0088dd;
+    padding: 15px;
+}
+
+
+
+table.one {
+    border-collapse: collapse;
+    empty-cells: hide;
+
+    border-spacing: 0;
+
+
+} */
+  /*  table.two {
+    empty-cells: hide;
+} */
+
+
+
+
+
+
+
+
+
+/* 
+
+input{
+    font-size: 120%;
+    color: #5a5854;
+    background-color: pink;
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 5px 5px 5px 30px;
+    display: block;
+    margin-bottom: 10px; 
+}
+
+input:focus {
+    background-color: #ffffff;
+    border: 1px solid #b1e1e4;
+}  
+
+input#submit {
+    color: #5a5854;
+    text-shadow: 0px 1px 1px red;
+
+    border-bottom: 2px solid red;
+    background-color: pink;
+    }
+
+
+
+
+    fieldset {
+        width: 350px;
+        border: 1px solid #dcdcdc;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: right;
+    }
+
+
+
+legend {
+        background-color: #efefef;
+        border: 1px solid #dcdcdc;
+        border-radius: 10px;
+        padding: 10px 20px;
+        text-align: left;
+        text-transform: uppercase;
+} */
+
+
+
+
+div {
+    border-bottom: 1px solid #efefef;
+    margin: 10px;
+    padding-bottom: 10px;
+    width: 260px;}
+.title {
+    float: left;
+    width: 100px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+a {
+    cursor: move;
+}

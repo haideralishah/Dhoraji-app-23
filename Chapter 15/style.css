@@ -1,0 +1,47 @@
+/* p{
+    position: static;
+} */
+/* 
+h1{
+    background-color: red;
+    z-index: 5;
+}
+.second-para{
+    position: relative;
+    top:50px; 
+}
+
+.third-para{
+    background-color: white;
+    position: absolute;
+    top:10px;
+    z-index: 10;
+}
+
+.navbar{
+    position: fixed;
+    top:0;
+    left: 0;
+    background-color: #3d5a99;
+    color: #ffffff;
+    width: 100%;
+    z-index: 100;
+}
+
+blockquote{
+    border:1px solid grey;
+    padding: 30px;
+    width: 30%;
+    float: left;
+
+} */
+
+
+
+.col1of3, .col2of3, .col3of3{
+
+    width: 28.33%;
+    padding: 2.5%;
+    float: left;
+
+}

@@ -1,0 +1,41 @@
+p{
+    border-width: 5px 10px 2px 1px;
+    border-style: solid dashed dotted groove;
+    border-color: aqua red;
+
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+
+
+    border-top: 1px solid red;
+    border: 10px solid greenyellow;
+
+    padding: 20px 40px 10px 5px;
+    padding-left: 50px;
+
+
+    margin: 40px 20px 10px 5px;
+
+
+    /* height: 20px;
+    margin: 5px;
+    padding: 5px;
+    border: 5px solid black; */
+
+    width: 50%;
+    text-align: left;
+    margin: 0 auto;
+
+    /* border-image: url("borders.jpg") 20 20 20 20 repeat;} */
+
+    border-radius: 50px / 20px;
+}
+
+
+h1{
+    background-color: yellow;
+    /* display: inline-block; */
+    text-align: right;
+}
