@@ -24,8 +24,8 @@
 
 
 
-var num1 = 1;
-var num2 = 3;
+// var num1 = 1;
+// var num2 = 3;
 
 
 /*
@@ -200,7 +200,7 @@ num1 <= num2  // smaller than or equals to
 
 
 
-var age = prompt('what is your age?');
+// var age = prompt('what is your age?');
 // var format = prompt('which format you want to play?');
 // var team;
 // if (age >= 18) {
@@ -231,6 +231,136 @@ var age = prompt('what is your age?');
 
 
 
+// var tableName = +prompt("Enter a table name.");
+// var count = 1;
+
+// document.write(tableName + " x " + count + " = " + tableName * count++ + "<br />");
+
+// //             2 X 1 = 2
+// document.write(tableName + " x " + count + " = " + tableName * count++ + "<br />");
+// //              2  x  2 = 
+
+// document.write(tableName + " x " + count + " = " + tableName * count++ + "<br />");
+
+// document.write(tableName + " x " + count + " = " + tableName * count++ + "<br />");
+
+// document.write(tableName + " x " + count + " = " + tableName * count++ + "<br />");
+
+// document.write(tableName + " x " + count + " = " + tableName * count++ + "<br />");
+
+// document.write(tableName + " x " + count + " = " + tableName * count++ + "<br />");
+
+// document.write(tableName + " x " + count + " = " + tableName * count++ + "<br />");
+
+// document.write(tableName + " x " + count + " = " + tableName * count++ + "<br />");
+
+// document.write(tableName + " x " + count + " = " + tableName * count++ + "<br />");
+
+
+
+
+
+
+
+
+
+
+// var gender = prompt('what is your gender?');
+
+// if(gender === "male"){
+//     document.write("Good Morning Sir!");
+// }
+// else{
+//     document.write("Good Morning Ma'am !");
+// }
+
+
+
+
+
+
+// var maxAge = +prompt('what is the max age required for the admission of your club?');
+// var userAge = +prompt('what is user age?');
+
+// if (userAge <= maxAge) {
+//     document.write('Congrats! you got admission.')
+// }
+// else if (userAge > maxAge) {
+//     document.write('You do not qualify for admission.');
+// }
+// else {
+//     document.write('Something went wrong.');
+// }
+
+
+
+
+
+// var mathsScore = +prompt('What was your Maths score?');
+// var englishScore = +prompt('What was your English score?');
+// var csScore = +prompt('What was your Computer Science score?');
+// var obtainedMarks = mathsScore + englishScore + csScore;
+// var totalPercent = obtainedMarks / 300 * 100;
+
+// document.write('<h1>Marks Sheet</h1><br />');
+
+// document.write('Total Marks: ' + 300 + '<br />');
+// document.write('Marks Obtained: ' + obtainedMarks + '<br />');
+// document.write('Percentage: ' + totalPercent + '%' + '<br />');
+
+
+// if (totalPercent >= 80) {
+//     document.write("Grade: A+");  
+// }
+// else if(totalPercent >= 70 && totalPercent < 80) {
+//     document.write("Grade: A");  
+// }
+// else if(totalPercent >= 60 && totalPercent < 70) {
+//     document.write("Grade: B");  
+// }
+// else if(totalPercent < 60) {
+//     document.write("Grade: Fail");  
+// }
+
+
+
+
+
+
+// var secreteNumber = 3;
+
+// var userGuess = +prompt('Guess a number between 1 to 5.');
+
+
+// if (userGuess === secreteNumber) {
+//     document.write('Bingo! You chose correct answer.');
+// }
+// else {
+//     var difference = secreteNumber - userGuess;
+//     document.write("You are closer " + difference);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var userInput = +prompt('tell us a number');
+
+
+// if (userInput % 3 === 0) {
+//     document.write(userInput + ' is divisible by 3.');
+// }
+// else{
+//     document.write(userInput + ' is not divisible by 3.');
+// }
 
 
 
@@ -247,40 +377,37 @@ var age = prompt('what is your age?');
 
 
 
+// var userInput = +prompt('tell us a number');
+
+
+// if (userInput % 2 === 0) {
+//     document.write(userInput + ' is even.');
+// }
+// else{
+//     document.write(userInput + ' is odd.');
+// }
 
 
 
 
 
 
+var firstNum = +prompt('enter first number');
+var secondNum = +prompt('enter second number');
+var operator = prompt('enter operator');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if(operator === '+'){
+    document.write(firstNum + secondNum);
+}
+else if(operator === '-'){
+    document.write(firstNum - secondNum);
+}
+else if(operator === '*'){
+    document.write(firstNum * secondNum);
+}
+else if(operator === '/'){
+    document.write(firstNum / secondNum);
+}
+else if(operator === '%'){
+    document.write(firstNum % secondNum);
+}
