@@ -1,0 +1,12 @@
+#container{
+    border: 1px solid gray;
+    height: 400px;
+    width: 800px;
+    margin: auto;
+
+}
+.btn{
+    margin: auto;
+    
+    margin-left: 50%;
+}

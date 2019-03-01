@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
 </head>
 
 <body>
@@ -57,7 +58,9 @@
 
 
 
-    <img src="images/greet.jpg" alt="greet user" onclick="imageElement(this)" />
+    <!-- <img src="greet.jpg" alt="greet user" id='greet-image' onclick="imageElement(this)" /> -->
+
+    <!-- <img src="img2.jpg" alt="house" id='house-image' onclick="imageElement(this)" /> -->
 
 
 
@@ -67,11 +70,86 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <img src="greet.jpg"
+     alt="greet user" 
+     id='greet-image'
+     onmouseover="src='img2.jpg'"
+     onmouseout="src='greet.jpg'"
+     /> -->
+
+
+
+
+    <!-- <p onmouseover="makeItColorful(this)" onmouseout="makeItNormal(this)">1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe iure, eaque facere totam quam laudantium dignissimos ipsam quo sint quia eius eveniet deleniti neque, fuga, amet dicta aliquid vero laborum.</p>
+     <p onmouseover="makeItColorful(this)" onmouseout="makeItNormal(this)">2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe iure, eaque facere totam quam laudantium dignissimos ipsam quo sint quia eius eveniet deleniti neque, fuga, amet dicta aliquid vero laborum.</p>
+     <p onmouseover="makeItColorful(this)" onmouseout="makeItNormal(this)">3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe iure, eaque facere totam quam laudantium dignissimos ipsam quo sint quia eius eveniet deleniti neque, fuga, amet dicta aliquid vero laborum.</p>
+     <p onmouseover="makeItColorful(this)" onmouseout="makeItNormal(this)">4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe iure, eaque facere totam quam laudantium dignissimos ipsam quo sint quia eius eveniet deleniti neque, fuga, amet dicta aliquid vero laborum.</p>
+     <p onmouseover="makeItColorful(this)" onmouseout="makeItNormal(this)">5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe iure, eaque facere totam quam laudantium dignissimos ipsam quo sint quia eius eveniet deleniti neque, fuga, amet dicta aliquid vero laborum.</p> -->
+
+
+
+    <p onmouseover="makeitlongpara(this)">
+        A quick brown fox jumps over the lazy dog.
+    </p>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <label>
+        City Name:
+        <input type="text" name='cityname' onblur="makeItNormal(this)" onfocus="makeItColorful(this)" />
+    </label>
+
+
+    <label>
+        Team Name:
+        <input type="text" name='teamname' id="team-name" onblur="makeItNormal(this)" onfocus="makeItColorful(this)" />
+    </label>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <a href="#" onmouseover="alert('hi')">click it...</a>
+    <input type="button" value="Click" onm="alert('Hello world!');">
+ -->
 
     <script src="app.js"></script>
-
-
-
 </body>
 
 </html>
