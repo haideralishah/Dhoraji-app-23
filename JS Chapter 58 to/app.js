@@ -18,9 +18,21 @@
 .previousSibling
 
 
-
 */
 
+
+/*
+element.attributeName
+
+element.hasAttribute('attributeName')
+
+element.setAttribute('attributeName', 'value')
+
+element.getAttribute('attributeName')
+
+element.attributes; // list of attributes
+
+*/
 
 
 
@@ -247,23 +259,124 @@
 
 
 
+
+
+// var targetNode = document
+//     .childNodes[1]
+//     .childNodes[2]
+//     .childNodes[1];
+
+// // console.log(targetNode);
+
+// // targetNode.id = 'dumpty';
+// // console.log(targetNode.hasAttribute('src'));
+
+// // targetNode.setAttribute('class', 'dummy-div');
+
+// var targetNodeId = targetNode.getAttribute('class');
+
+// console.log(targetNodeId)
+
+
+// var targetNodeAttr = document.getElementById('humpty').attributes[2];
+
+// console.log(targetNodeAttr);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
-element.attributeName
 
-element.hasAttribute('attributeName')
+document.createElement('ElementName');
+document.createTextNode('any text');
+.appendChild(childElement)
+.insertBefore(newChildElement, nextPara)
+parent.removeChild(childNode)
 
-element.setAttribute('attributeName', 'value')
+
 
 */
 
 
 
-var targetNode = document
-    .childNodes[1]
-    .childNodes[2]
-    .childNodes[1];
+// var img = document.createElement('img');
+// img.setAttribute('src', filePath)
+// img.setAttribute('alt', 'xyz')
 
-targetNode.id = 'dumpty';
-console.log(targetNode.hasAttribute('src'));
 
-targetNode.setAttribute('class', 'dummy-div');
+// var targetNode = document.getElementById('humpty')
+
+// var p = document.createElement('P');
+// p.setAttribute('id', 'custome-para');
+
+// var textpara = document.createTextNode('Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, perspiciatis sint ea mollitia id omnis, culpa repellat voluptatum reprehenderit ut nobis in. Dicta error, repellendus hic odio iste molestias cumque?');
+// p.appendChild(textpara);
+// targetNode.appendChild(p);
+
+
+// var p2 = document.createElement('P');
+// var textpara2 = document.createTextNode('learning DOM');
+// p2.appendChild(textpara2);
+
+
+// targetNode.appendChild(p2);
+
+
+
+
+
+
+
+// var parentNode = document.getElementById('humpty');
+// var firstChildNode = document.getElementById('humpty').childNodes[1];
+
+// var p = document.createElement('p');
+// var text= document.createTextNode('I like apple.');
+// p.appendChild(text);
+
+// // parentNode.appendChild(p)
+
+// parentNode.insertBefore(p, firstChildNode);
+
+
+
+var parentNode = document.getElementById('humpty');
+
+var secondPara = document.getElementById('humpty').childNodes[3];
+
+console.log(parentNode,secondPara);
+
+
+parentNode.removeChild(secondPara);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
