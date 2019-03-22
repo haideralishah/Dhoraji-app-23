@@ -358,16 +358,14 @@ parent.removeChild(childNode)
 
 
 
-var parentNode = document.getElementById('humpty');
+// var parentNode = document.getElementById('humpty');
 
-var secondPara = document.getElementById('humpty').childNodes[3];
+// var secondPara = document.getElementById('humpty').childNodes[3];
 
-console.log(parentNode,secondPara);
-
-
-parentNode.removeChild(secondPara);
+// console.log(parentNode,secondPara);
 
 
+// parentNode.removeChild(secondPara);
 
 
 
@@ -380,3 +378,8 @@ parentNode.removeChild(secondPara);
 
 
 
+
+
+var humptyDiv = document.getElementById('humpty');
+var firstChild = humptyDiv.childNodes[1] 
+console.log(firstChild.previousSibling);
