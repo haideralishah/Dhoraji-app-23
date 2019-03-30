@@ -218,7 +218,6 @@ array is an special type of object
 
 
 
-
 // var student1 ={
 //     name: 'haider',
 //     rollNo: '2643',
@@ -263,25 +262,23 @@ array is an special type of object
 
 
 
-var arr =[];
+// var arr =[];
 
-function getValues(){
-    var studentName = document.getElementById('stName').value;
-    var studentRollNumber = document.getElementById('stRollNo').value;
-    var studentClass = document.getElementById('stClass').value;
+// function getValues(){
+//     var studentName = document.getElementById('stName').value;
+//     var studentRollNumber = document.getElementById('stRollNo').value;
+//     var studentClass = document.getElementById('stClass').value;
 
-    var student = {
-        name: studentName,
-        rollNumber: studentRollNumber,
-        stClass: studentClass
-    }
+//     var student = {
+//         name: studentName,
+//         rollNumber: studentRollNumber,
+//         stClass: studentClass
+//     }
 
-    arr.push(student);
+//     arr.push(student);
 
-    console.log(arr);
-}
-
-
+//     console.log(arr);
+// }
 
 
 
@@ -291,5 +288,221 @@ function getValues(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var plan1 = {
+//     name: "Basic",
+//     price: 3.99,
+//     space: 100,
+//     transfer: 1000,
+//     pages: 10,
+//     discountMonths: [6, 2],
+//     calcAnnual: function (percentIfDisc) {
+//         var bestPrice = this.price;
+//         var currDate = new Date();
+//         var thisMo = currDate.getMonth();
+//         for (var i = 0; i < this.discountMonths.length; i++) {
+//             if (this.discountMonths[i] === thisMo) {
+//                 bestPrice = this.price * percentIfDisc;   // .85
+//                 break;
+//             }
+//         }
+//         return bestPrice * 12;
+//     }
+// };
+
+// var subcPrice = plan1.calcAnnual(.75);
+// console.log(subcPrice);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function Students(name, rollNo, stClass) {
+//     this.studentName = name;
+//     this.rollNumber = rollNo;
+//     this.studentClass = stClass;
+// }
+
+// var student1 = new Students('haider', '2643', 'Mobile and Web App Development');
+// var student2 = new Students('ali', '2644', 'Mobile and Web App Development');
+
+// console.log(student1);
+// console.log(student2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function PricePlan(name, price, sitePages, discountMonths) {
+//     this.name = name;
+//     this.price = price;
+//     this.sitePages = sitePages;
+//     this.discountMonths = discountMonths;
+//     this.calcAnnual = function (discountRate) {
+//         var currentDate = new Date();
+//         var currentMonth = currentDate.getMonth();
+//         var bestPrice = this.price * 12;
+//         for (var i = 0; i < this.discountMonths.length; i++) {
+//             if (this.discountMonths[i] == currentMonth) {
+
+//                 bestPrice = bestPrice * discountRate; // .80
+//                 break;
+
+//             }
+//         }
+//         return bestPrice;
+//     }
+// } 
+// var basicPlan = new PricePlan('basic', 4, '10', [3, 6]);
+// var specialPlan = new PricePlan('special', 5, '20', [2, 7]);
+// var bestPriceBasic = basicPlan.calcAnnual(.80)
+// var bestPriceSpecial = specialPlan.calcAnnual(.80);
+// console.log(bestPriceBasic, bestPriceSpecial);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function Student(name, rollNo, className){
+//     this.name = name;
+//     this.rollNo = rollNo;
+//     this.className = className;
+// }
+
+// var allStudents = [];
+
+// function getValues(){
+//     var stName = document.getElementById().value;
+//     var stRollNo = document.getElementById().value;
+//     var stClass = document.getElementById().value;
+
+
+//     var studentObject =  new Student(stName, stRollNo, stClass);
+
+//     allStudents.push(studentObject);
+
+//     document.getElementById().value = '';
+//     document.getElementById().value = '';
+//     document.getElementById().value = '';
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var counter = 0;
+
+var timer = setInterval(function(){
+    counter++;
+    console.log(counter);
+},1000);
+
+setTimeout(function(){
+    console.log('Welcome To Our Web');
+    clearInterval(timer);
+},5000);
 
 
