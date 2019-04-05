@@ -493,16 +493,126 @@ array is an special type of object
 
 
 
-var counter = 0;
+// var counter = 0;
 
-var timer = setInterval(function(){
-    counter++;
-    console.log(counter);
-},1000);
+// var timer = setInterval(function(){
+//     counter++;
+//     console.log(counter);
+// },1000);
 
-setTimeout(function(){
-    console.log('Welcome To Our Web');
-    clearInterval(timer);
-},5000);
+// setTimeout(function(){
+//     console.log('Welcome To Our Web');
+//     clearInterval(timer);
+// },5000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var miliSecond = 0;
+// var second = 0;
+// var minute = 0;
+// var intervalTime;
+// var isTimerStarted = false;
+
+// var currentTime = minute + ' : ' + second + ' : ' + miliSecond;
+// // 0 : 0 : 0
+
+// var stopwatch = document.getElementById('stopwatch');
+// stopwatch.innerHTML = currentTime;
+
+
+// function startTimer() {
+//     if(isTimerStarted !== true){
+//         intervalTime = setInterval(updateTime, 1);
+//     }
+// }
+
+// function updateTime() {
+//     isTimerStarted = true;
+
+//     if (miliSecond < 9) {
+//         miliSecond++;
+//         currentTime = minute + ' : ' + second + ' : ' + miliSecond;
+//         stopwatch.innerHTML = currentTime;
+//     }
+//     else if (second < 59) {
+//         miliSecond = 0;
+//         second++;
+//         currentTime = minute + ' : ' + second + ' : ' + miliSecond;
+//         stopwatch.innerHTML = currentTime;
+//     }
+//     else {
+//         miliSecond = 0;
+//         second = 0;
+//         minute++;
+//         currentTime = minute + ' : ' + second + ' : ' + miliSecond;
+//         stopwatch.innerHTML = currentTime;
+//     }
+// }
+
+// function stopTimer() {
+//     isTimerStarted = false;
+//     clearInterval(intervalTime);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function Car(carName, modal, color) {
+    this.carName = carName;
+    this.modal = modal;
+    this.color = color;
+}
+
+Car.prototype.steering = true;
+
+var corolla = new Car('Corolla', '2018', 'black');
+var corolla = new Car('cultus', '2018', 'black');
+
+console.log(corolla);
+
+
+
+
+
+
+
 
 
