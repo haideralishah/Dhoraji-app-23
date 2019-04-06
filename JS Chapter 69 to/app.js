@@ -595,18 +595,283 @@ array is an special type of object
 
 
 
-function Car(carName, modal, color) {
-    this.carName = carName;
-    this.modal = modal;
-    this.color = color;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function Car(carName, modal, color) {
+//     this.carName = carName;
+//     this.modal = modal;
+//     this.color = color;
+// }
+
+// Car.prototype.steering = true;
+
+// var corolla = new Car('Corolla', '2018', 'black');
+// var corolla = new Car('cultus', '2018', 'black');
+
+// console.log(corolla);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 3 form fields
+
+
+// 1. student Name
+// 2. roll number
+// 3. fees paid (number)
+
+
+// 1 button
+
+// make object of above 3 valus using a constructor function.
+
+// push these objects in an empty Array
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var allStudents = [];
+
+
+// function Students(name, rollnumber, feespaid) {
+//     this.name = name;
+//     this.rollNumber = rollnumber;
+//     this.feespaid = feespaid;
+// }
+// Students.prototype.institue = 'Dhoraji Association';
+
+// Students.prototype.remainingFee = function (monthlyFee) {
+//     var annualFee = monthlyFee * 12;
+//     var remainingFee = annualFee -this.feespaid  ;
+//     console.log('Remaining Fee: ', remainingFee);
+// }
+
+// function addStudentsData() {
+//     var stName = document.getElementById('stname').value;
+//     var stRoll = document.getElementById('roll').value;
+//     var stFees = document.getElementById('feespaid').value;
+
+//     var newStudent = new Students(stName, stRoll, stFees);
+
+//     newStudent.remainingFee(5000);
+
+
+//     allStudents.push(newStudent);
+
+//     console.log(allStudents);
+// }
+
+
+
+// for (var i = 0; i < allStudents.length; i++) {
+//     var eachStudent = allStudents[i];
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function Students(name, rollnumber, feespaid) {
+//     this.name = name;
+//     this.rollNumber = rollnumber;
+//     this.feespaid = feespaid;
+// }
+// Students.prototype.institue = 'Dhoraji Association';
+
+
+// function addStudentsData() {
+//     var stName = document.getElementById('stname').value;
+//     var stRoll = document.getElementById('roll').value;
+//     var stFees = document.getElementById('feespaid').value;
+
+//     var newStudent = new Students(stName, stRoll, stFees);
+//     newStudent.institue = 'Saylani';
+//     // allStudents.push(newStudent);
+
+//     console.log(newStudent.institue);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function Students(name, rollnumber, feespaid) {
+//     this.name = name;
+//     this.rollNumber = rollnumber;
+//     this.feespaid = feespaid;
+// }
+// Students.prototype.institue = 'Dhoraji Association';
+
+// var newStudent = new Students('haider', '2643', 5000);
+
+
+// var isInstitue = 'institue' in newStudent;
+
+// var isOwnProp = newStudent.hasOwnProperty('institue');
+
+// console.log(isOwnProp,isInstitue);
+
+
+
+
+
+
+// var car = {
+//     name: 'corolla',
+//     modal: '2016',
+//     color: 'black'
+// }
+
+
+// var isModalAvailable = 'modal' in car;
+
+// console.log(isModalAvailable);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var fruits = ['apple', 'banana', 'orange'];
+
+var car = {
+    name: 'corolla',
+    modal: '2016',
+    color: 'black'
 }
 
-Car.prototype.steering = true;
 
-var corolla = new Car('Corolla', '2018', 'black');
-var corolla = new Car('cultus', '2018', 'black');
+for(var key in car){
+    
+    console.log(car[key]);
 
-console.log(corolla);
+}
+
+
+
+// console.log(car['modal'])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
