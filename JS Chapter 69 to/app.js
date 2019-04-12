@@ -834,20 +834,20 @@ array is an special type of object
 
 
 
-var fruits = ['apple', 'banana', 'orange'];
+// var fruits = ['apple', 'banana', 'orange'];
 
-var car = {
-    name: 'corolla',
-    modal: '2016',
-    color: 'black'
-}
+// var car = {
+//     name: 'corolla',
+//     modal: '2016',
+//     color: 'black'
+// }
 
 
-for(var key in car){
+// for(var key in car){
     
-    console.log(car[key]);
+//     console.log(car[key]);
 
-}
+// }
 
 
 
@@ -861,6 +861,30 @@ for(var key in car){
 
 
 
+// var obj = {
+//     a: 1,
+//     b: 2,
+//     c: 3
+// }
+
+
+// var c = 'a';
+
+// console.log(obj[c]);
+
+
+
+
+
+
+// var obj = {};
+
+// var a = "c";
+
+// obj[a] = 1;
+// //obj.a =1;
+
+// console.log(obj);
 
 
 
@@ -874,6 +898,48 @@ for(var key in car){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// http://www.mybeautifulsite.com/products/page33.html#humidifier
+
+// http --- protocol
+
+// www.mybeautifulsite.com --- domain / host
+
+
+// http://www.mybeautifulsite.com --- href
+
+
+// /products/page33.html --- path
+
+
+// #humidifier --- hash
+
+
+function abc(a,b){
+    console.log(a);
+}
+
+
+abc()
 
 
 
