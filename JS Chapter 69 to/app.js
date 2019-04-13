@@ -909,15 +909,6 @@ array is an special type of object
 
 
 
-
-
-
-
-
-
-
-
-
 // http://www.mybeautifulsite.com/products/page33.html#humidifier
 
 // http --- protocol
