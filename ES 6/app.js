@@ -342,7 +342,21 @@
 
 
 
+// const parent = {
+//     foo() {
+//         console.log("Hello from the Parent");
+//     }
+// }
 
+// const child = {
+//     foo() {
+//         super.foo();
+//         console.log("Hello from the Child");
+//     }
+// }
+
+// Object.setPrototypeOf(child, parent);
+// child.foo();
 
 
 
@@ -502,19 +516,19 @@
 
 
 
-const makeToast = (breadType, topping1, topping2) => {
-    return `I had ${breadType} toast with ${topping1} and ${topping2}`;
-};
+// const makeToast = (breadType, topping1, topping2) => {
+//     return `I had ${breadType} toast with ${topping1} and ${topping2}`;
+// };
 
-const ingredients = ['wheat', 'butter', 'jam'];
-
-
-// makeToast(ingredients[0], ingredients[1], ingredients[2])
-
-var toast1 = makeToast(...ingredients);
+// const ingredients = ['wheat', 'butter', 'jam'];
 
 
-var toast2 = makeToast(...['sourdough', 'avocado', 'kale']);
+// // makeToast(ingredients[0], ingredients[1], ingredients[2])
+
+// var toast1 = makeToast(...ingredients);
+
+
+// var toast2 = makeToast(...['sourdough', 'avocado', 'kale']);
 
 
 
@@ -700,23 +714,210 @@ var toast2 = makeToast(...['sourdough', 'avocado', 'kale']);
 
 
 
-function foo() {
-    return [1, 2, 3];
+// function foo() {
+//     return [1, 2, 3];
+// }
+
+// let [a, b, c] = foo();
+
+
+// console.log(a, b, c);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class Car {
+//     constructor(){
+//         console.log('car is being made.');
+//     }
+
+//     speed(){
+//         console.log('car is in speed.');
+//     }
+
+
+// }
+
+
+// var newCar = new Car();
+
+// newCar.speed()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class Car {
+//     constructor(color, make, modal){
+
+//         this.color = color;
+//         this.make = make;
+//         this.modal = modal;
+
+//     }
+
+//     hybrid = true;
+
+//     speed(){
+//         console.log('car is in speed.');
+//     }
+
+
+// }
+// var newCar = new Car("red", 'suzuki', 2010);
+
+// console.log(newCar);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class Car {
+//     constructor(wheelsCount) {
+//         this.wheel = wheelsCount
+//     }
+// }
+
+// class Suzuki extends Car {
+//     constructor(color, modal, wheelsCount) {
+//         super(wheelsCount);
+//         this.color = color;
+//         this.make = 'Suzuki';
+//         this.modal = modal;
+
+//     }
+// }
+
+// class Cultus extends Suzuki {
+
+// }
+
+
+// var suzikiCar = new Suzuki('red', 2010, 4);
+
+// console.log(suzikiCar);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function printSum(sumValue) {
+    console.log(sumValue);
 }
 
-let [a, b, c] = foo();
+
+function sum(num1, num2, cb) {
+
+    var sum = num1 + num2;
+
+    cb(sum);
+}
 
 
-console.log(a, b, c);
-
-
-
-
-
-
-
-
-
+sum(2, 4, printSum);
 
 
 
@@ -725,3 +926,313 @@ console.log(a, b, c);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function sum(num1, num2, cb) {
+
+//     var sum = num1 + num2;
+
+//     cb(sum);
+// }
+
+
+
+// sum(2, 4, function(sumValue){
+//     setTimeout(function(){
+//         console.log(sumValue);
+//     }, 3000);
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var iftarParty = new Promise((resolve, reject) => {
+//     var randomeNumber = Math.ceil(Math.random() * 2)
+//     setTimeout(() => {
+//         if (randomeNumber === 1) {
+//             resolve();
+//         }
+//         else {
+//             reject();
+//         }
+//     }, 3000)
+// });
+
+// iftarParty
+//     .then(() => {
+//         var username = prompt('what is your name');
+//         document.write(`Welcome ${username}`);
+//     })
+//     .catch(() => {
+//         console.error('something went wrong');
+//     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var iftarParty = new Promise((resolve, reject) => {
+//     var randomeNumber = Math.ceil(Math.random() * 2)
+//     if (randomeNumber === 1) {
+//         resolve('Welcome to Promises');
+//     }
+//     else {
+//         reject('it was not number 1');
+//     }
+// });
+
+// iftarParty
+//     .then((msg) => {
+//         document.write(msg);
+//         return 'no error occurred'
+//     })
+//     .catch((err) => {
+//         console.error(err);
+//         return 'some error occurred'
+//     })
+//     .then((promiseResponse) => {
+//         console.log(promiseResponse);
+//     })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+text
+html
+
+json
+
+blob
+
+{
+  "userId": 1,
+  "id": 1,
+  "title": "delectus aut autem",
+  "completed": false
+}
+
+
+*/
+
+
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+    .then((response) => {
+        // console.log(response);
+        return response.json();
+    })
+    .then((jsonData)=>{
+        jsonData.haseeb = 'haseeb'
+        console.log(jsonData);
+        document.write(`Stori title is ${jsonData.title}`);
+    })
