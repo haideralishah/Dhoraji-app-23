@@ -904,20 +904,20 @@
 
 
 
-function printSum(sumValue) {
-    console.log(sumValue);
-}
+// function printSum(sumValue) {
+//     console.log(sumValue);
+// }
 
 
-function sum(num1, num2, cb) {
+// function sum(num1, num2, cb) {
 
-    var sum = num1 + num2;
+//     var sum = num1 + num2;
 
-    cb(sum);
-}
+//     cb(sum);
+// }
 
 
-sum(2, 4, printSum);
+// sum(2, 4, printSum);
 
 
 
@@ -1137,7 +1137,7 @@ sum(2, 4, printSum);
 
 
 
-
+// var i = 0;
 // var iftarParty = new Promise((resolve, reject) => {
 //     var randomeNumber = Math.ceil(Math.random() * 2)
 //     if (randomeNumber === 1) {
@@ -1150,16 +1150,19 @@ sum(2, 4, printSum);
 
 // iftarParty
 //     .then((msg) => {
-//         document.write(msg);
+//         // document.write(msg);
+//         console.log('inside first then', i++)
 //         return 'no error occurred'
 //     })
 //     .catch((err) => {
-//         console.error(err);
+//         console.error(err, i++);
 //         return 'some error occurred'
 //     })
 //     .then((promiseResponse) => {
-//         console.log(promiseResponse);
-//     })
+//         console.log(promiseResponse, i++);
+//     });
+
+// console.log('out of promise', i++);
 
 
 
@@ -1226,13 +1229,65 @@ blob
 */
 
 
-fetch('https://jsonplaceholder.typicode.com/todos/1')
-    .then((response) => {
-        // console.log(response);
-        return response.json();
-    })
-    .then((jsonData)=>{
-        jsonData.haseeb = 'haseeb'
-        console.log(jsonData);
-        document.write(`Stori title is ${jsonData.title}`);
-    })
+// fetch('https://jsonplaceholder.typicode.com/todos/1')
+//     .then((response) => {
+//         // console.log(response);
+//         return response.json();
+//     })
+//     .then((jsonData)=>{
+//         jsonData.haseeb = 'haseeb'
+//         console.log(jsonData);
+//         document.write(`Stori title is ${jsonData.title}`);
+//     })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var iftarBazar = ['apple', 'banana', 'khajoor', 'tarbooz'];
+
+
+// iftarBazar.map((fruit, indx) => {
+//     console.log(fruit, indx);
+// })
