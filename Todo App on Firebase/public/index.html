@@ -11,6 +11,8 @@
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-storage.js"></script>
+
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#config-web-app -->
 
@@ -31,12 +33,13 @@
 </head>
 
 <body>
-    
+
     <h1>Sign Up</h1>
 
     User Name: <input type="text" name="username" id="username">
     Email: <input type="email" name="email" id="email">
     Password <input type="password" name="password" id="password">
+    Your Display Picture: <input type="file" id="dp" name='dp' />
     <button onclick="signup()">Sign Up</button>
     <a href="signin.html">Already have an account? sign in here.</a>
 

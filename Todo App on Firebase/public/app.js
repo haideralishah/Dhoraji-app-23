@@ -1,6 +1,7 @@
 var auth = firebase.auth();
 var db = firebase.firestore();
 var todoDiv = document.getElementById('todo-list');
+var fireStorage = firebase.storage();
 
 /*Function for signup*/
 function signup() {
@@ -10,11 +11,24 @@ function signup() {
     auth.createUserWithEmailAndPassword(userEmail, userPassword)
         .then((user) => {
             console.log(user, 'usercreated');
-            saveUserDetailsToDB(userName, userEmail, user.user.uid);
-            localStorage.setItem('uid', user.user.uid);
+            savePicture(userName, userEmail, user.user.uid);
+
         })
 }
 
+/*function to save picture to DB*/
+function savePicture(uName, uEmail, UID) {
+    var image = document.getElementById('dp').files[0]
+    var storageRef = fireStorage.ref().child(`images/${image.name}`);
+    storageRef.put(image)
+        .then(function (imageSnapshot) {
+            imageSnapshot.ref.getDownloadURL()
+                .then(function (downloadURL) {
+                    saveUserDetailsToDB(uName, uEmail, UID, downloadURL);
+                    localStorage.setItem('uid', UID);
+                });
+        });
+}
 
 /*Function for signin*/
 function signin() {
@@ -29,11 +43,12 @@ function signin() {
 }
 
 /*Function to save user details to DB*/
-function saveUserDetailsToDB(userName, userEmail, uid) {
+function saveUserDetailsToDB(userName, userEmail, uid, DPURL) {
     db.collection("users").add({
         userName,
         userEmail,
-        uid
+        uid,
+        DPURL
     })
         .then(function (docRef) {
             console.log("Document written with ID: ", docRef.id);
@@ -88,6 +103,7 @@ function getUserTodos(uid) {
 
 /*Function to greet user*/
 function greetUser(user) {
+    document.getElementById('dp').src = user.DPURL;
     document.getElementById('greet-user').innerHTML = `Welcome ${user.userName}`
 }
 
@@ -205,6 +221,6 @@ function updateTodoToDOM(editedData, docID) {
     }
 
     var editedTodoDom = document.getElementById(docID);
- 
+
 
 }

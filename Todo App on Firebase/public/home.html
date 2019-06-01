@@ -11,6 +11,8 @@
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-storage.js"></script>
+
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#config-web-app -->
 
@@ -32,6 +34,7 @@
 
 <body onload="getUserDetails()">
     <h1>Todos</h1>
+    <img src="" alt="logged in user" id="dp" height="40" width="40">
     <p id="greet-user"></p>
 
     Todo: <input type="text" id="todo" name='todo' />
