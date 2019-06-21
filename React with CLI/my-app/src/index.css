@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+a{
+  color: red;
+}
+
+#my-links{
+  text-decoration: none;
+}
+
+
+.custome-links{
+  font-size: 3em;
+  text-decoration: none;
+
+}
