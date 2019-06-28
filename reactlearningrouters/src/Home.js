@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
+import Greetuser from './Greetuser';
 
 class Home extends Component {
     render() {
         return (
-            <h1>Welcome to Home</h1>
+            <div>
+                <h1>Welcome to Home</h1>
+                <Greetuser username="Haider" />
+                <Greetuser />
+
+            </div>
         )
     }
 }
