@@ -3,6 +3,8 @@ import Home from './Home';
 import About from './About';
 import List from './List';
 import Olxadlist from './Olxadlist';
+import Addetails from './Addetails';
+
 
 
 import Contact from './Contact';
@@ -22,6 +24,7 @@ class App extends Component {
         <Route path='/contact' component={Contact} />
         <Route path='/list' component={List} />
         <Route path='/olxadlist' component={Olxadlist} />
+        <Route path='/adDetails/:adId' component={Addetails} />
 
       </Router>
     )

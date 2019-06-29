@@ -19,8 +19,23 @@ class Clock extends Component {
                 currentDateandTime: new Date().toLocaleString(),
                 count: this.state.count + 1
             });
-            
+
         }, 1000);
+    }
+    shouldComponentUpdate() {
+        var randomNumber = Math.random()
+        if (randomNumber > 0.5555555555555555) {
+            return true
+
+        }
+        else {
+            return false
+
+        }
+    }
+
+    componentDidUpdate(){
+        console.log('did update called')
     }
 
     render() {
