@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { signup } from '../store/actions/authaction'
+import { Link } from "react-router-dom";
+
+const errorStyle = {
+    color: 'red',
+    border: '1px solid red'
+}
+
 class Signup extends Component {
     state = {
         email: '',
@@ -25,12 +32,22 @@ class Signup extends Component {
                 <h1>Hello Signup</h1>
                 Email: <input type="text" name='email' value={this.state.email} onChange={this.emailFormHandler.bind(this)} /><br />
                 Password: <input type="password" name='password' value={this.state.password} onChange={this.passwordFormHandler.bind(this)} />
-                <button onClick={this.signup.bind(this)}>Signup</button>
+                <button onClick={this.signup.bind(this)}>Signup</button><br />
                 {
-                    (this.props.loader === true)?(
+                    (this.props.loader === true) ? (
                         <h1>Loading...</h1>
-                    ): null
+                    ) : null
+
+
                 }
+                {
+                    (this.props.showError === true) ? (
+                        <div style={errorStyle}>{this.props.errorMessage}</div>
+                    ) : null
+
+                }
+                <br /><br />
+                <Link to="/signin">Already have an account? Signin</Link>
 
             </div>
         )
@@ -39,7 +56,9 @@ class Signup extends Component {
 
 function mapStateToProps(state) {
     return ({
-        loader: state.basicInfo.loader
+        loader: state.basicInfo.loader,
+        showError: state.basicInfo.showError,
+        errorMessage: state.basicInfo.errorMessage,
     })
 }
 

@@ -7,7 +7,10 @@ const INITIAL_STATES = {
     pakInSemifinal: false,
     loader: false,
     email: '',
-    uid:''
+    uid: '',
+    errorMessage: '',
+    showError: false,
+    allTodos: []
 }
 
 export default (state = INITIAL_STATES, action) => {
@@ -32,6 +35,29 @@ export default (state = INITIAL_STATES, action) => {
                 email: action.payload.email,
                 uid: action.payload.uid
             })
+
+        case "SHOW_ERROR":
+            return ({
+                ...state,
+                showError: true,
+                errorMessage: action.payload
+            })
+        case "REMOVE_ERROR":
+            return ({
+                ...state,
+                showError: false,
+                errorMessage: ''
+            })
+        case "ALL_TODOS":
+
+            return ({
+                ...state,
+                allTodos: action.payload
+
+            })
+
+
+
 
         default:
             return state;
