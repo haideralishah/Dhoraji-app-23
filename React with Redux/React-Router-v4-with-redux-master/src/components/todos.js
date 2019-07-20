@@ -25,16 +25,9 @@ class Todos extends Component {
 
     addTodo() {
         this.props.addTodotoFirebase(this.state.todoInput, this.props.currentUserUid);
-    }
-
-
-    static getDerivedStateFromProps(nextProps, nextstate) {
-        console.log(nextProps)
-
-        return {
-            allTodos: nextProps.allTodos,
-        }
-
+        this.setState({
+            todoInput:''
+        })
     }
 
     render() {
@@ -48,7 +41,7 @@ class Todos extends Component {
 
                 {
                     this.state.allTodos.map((todo, index) => {
-                        <h1>todo.todo</h1>
+                        return <Tododetails key={index} todoDetails={todo}/>
                     })
                 }
             </div>

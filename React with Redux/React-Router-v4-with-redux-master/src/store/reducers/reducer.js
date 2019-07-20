@@ -52,11 +52,34 @@ export default (state = INITIAL_STATES, action) => {
 
             return ({
                 ...state,
-                allTodos: action.payload
-
+                allTodos: INITIAL_STATES.allTodos.push(action.payload)
             })
 
+        case "DEL_TODO":
+            let delIndex;
+            INITIAL_STATES.allTodos.map((todo, index) => {
+                if (todo.docId === action.payload.docId) {
+                    delIndex = index;
+                }
+            });
 
+            return ({
+                ...state,
+                allTodos: INITIAL_STATES.allTodos.splice(delIndex, 1)
+            })
+
+        case "EDIT_TODO":
+            let editIndex;
+            INITIAL_STATES.allTodos.map((todo, index) => {
+                if (todo.docId === action.payload.docId) {
+                    editIndex = index;
+                }
+            });
+
+            return ({
+                ...state,
+                allTodos: INITIAL_STATES.allTodos.splice(editIndex, 1, action.payload)
+            })
 
 
         default:

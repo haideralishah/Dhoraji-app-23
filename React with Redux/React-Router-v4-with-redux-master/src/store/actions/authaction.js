@@ -92,23 +92,62 @@ export function addTodotoFirebase(todoInput, uid) {
 function fetchTodos(uid) {
     return (dispatch) => {
         db.collection("todos").where("uid", "==", uid)
-            .get()
-            .then(function (querySnapshot) {
-                let allTodos = [];
-                querySnapshot.forEach(function (doc) {
-                    // doc.data() is never undefined for query doc snapshots
-                    let todoObject = {
-                        docId: doc.id,
-                        todo: doc.data().todoInput,
-                        uid: doc.data().uid
+            .onSnapshot(function (todoSnapshot) {
+                todoSnapshot.docChanges().forEach(function (change) {
+                    if (change.type === "added") {
+                        let todoObject = {
+                            docId: change.doc.id,
+                            todo: change.doc.data().todoInput,
+                            uid: change.doc.data().uid
+                        }
+                        dispatch({ type: 'ALL_TODOS', payload: todoObject })
                     }
-                    allTodos.push(todoObject);
-                    dispatch({ type: 'ALL_TODOS', payload: allTodos })
+                    if (change.type === "modified") {
+                        console.log("Modified city: ", change.doc.data());
+                        let todoObject = {
+                            docId: change.doc.id,
+                            todo: change.doc.data().todoInput,
+                            uid: change.doc.data().uid
+                        }
+                        console.log(todoObject, 'dispatch')
+                        dispatch({ type: 'EDIT_TODO', payload: todoObject })
+                    }
+                    if (change.type === "removed") {
+                        let todoObject = {
+                            docId: change.doc.id,
+                            todo: change.doc.data().todoInput,
+                            uid: change.doc.data().uid
+                        }
+                        dispatch({ type: 'DEL_TODO', payload: todoObject })
+                    }
                 });
-            })
-            .catch(function (error) {
-                console.log("Error getting documents: ", error);
             });
+    }
+}
+
+
+
+
+
+export function deleteTodo(delTodo) {
+    return dispatch => {
+        console.log(delTodo);
+        db.collection("todos").doc(delTodo.docId).delete()
+            .then(function () {
+                console.log("Document successfully deleted!");
+            }).catch(function (error) {
+                dispatch({ type: 'SHOW_ERROR', payload: error.message });
+                dispatch(removeError());
+            });
+
+    }
+}
+
+
+export function saveEditTodoinDB(editTodo) {
+    return dispatch => {
+        console.log(editTodo);
+        db.collection("todos").doc(editTodo.docId).update(editTodo);
 
 
     }
