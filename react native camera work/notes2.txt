@@ -1,0 +1,28 @@
+
+
+
+
+
+
+switch(action.type){
+    case "CHANGE_BREAKFAST":
+        return jo kch b phle se h
+               breakfast: action.payload
+    default:
+            return xyz;        
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+dispatch({type:'CHANGE_BREAKFAST', payload: "Loki ki Sabzi"})

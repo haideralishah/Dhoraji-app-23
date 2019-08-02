@@ -1,0 +1,37 @@
+
+canteen = {
+    breakfast: "tende parathe",
+    lunch: 'bhindi chawal',
+    dinner: 'karela bengan'
+}
+
+
+Provider
+
+
+Executivs: {
+    BossA
+    BossB
+    BossC
+}
+
+operation : {
+    A
+    B
+    C
+}
+
+HR: {
+    x
+    y
+    z
+}
+
+QA :{
+    J
+    K
+    L
+}
+
+
+
