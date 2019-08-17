@@ -10,6 +10,13 @@ app.get("/", function (request, response) {
 app.get("/about", function (request, response) {
     response.send("Hello about!");
 });
+app.use(function(request,response, next){
+    response.send("Bad Request");
+});
+app.get("/service", function (request, response) {
+    response.send("Hello about!");
+});
+
 app.listen(3000, function () {
     console.log("Express app started on port 3000.");
 });
