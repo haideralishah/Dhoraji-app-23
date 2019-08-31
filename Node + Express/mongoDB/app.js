@@ -1,8 +1,8 @@
 function callAPIs() {
-    // fetch('http://localhost:3000/dummyAPI', { mode: 'no-cors' })
+    // fetch('http://localhost:3000/dummyAPI/')
     //     .then((response) => {
     //         console.log(response)
-    //         return response.text()
+    //         return response.json()
     //     })
     //     .then((data) => {
     //         console.log(data);
@@ -13,9 +13,9 @@ function callAPIs() {
 
 
     var newUser = {
-        email: 'xyz@dhoraji.com',
+        email: 'xyzhgh@dhoraji.com',
         password: '123456',
-        userName: 'Dhoraji Learners'
+        userName: 'Dhoraji New Learners'
     };
     fetch('http://localhost:3000/createUser', {
         method: "post",
@@ -23,12 +23,14 @@ function callAPIs() {
             'Content-Type': 'application/json',
             // 'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: JSON.stringify(newUser), mode: 'no-cors'
+        body: JSON.stringify(newUser)
     })
         .then((response) => {
-            console.log(response,'response')
+            return response.json()
         })
-
+        .then((data) => {
+            console.log(data);
+        })
 
 
 

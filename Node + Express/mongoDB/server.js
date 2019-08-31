@@ -3,11 +3,13 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var UserModel = require('./models/user');
 var TodosModel = require('./models/todo');
+var cors = require('cors');
 
 mongoose.connect('mongodb+srv://dhoraji:dhoraji@cluster0testing-gxgji.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true });
 
 var app = express();
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -15,14 +17,9 @@ app.post('/createUser', function (req, res, next) {
     var newUser = new UserModel({
         email: req.body.email,
         password: req.body.password,
-        displayUserName: req.body.userName
+        userName: req.body.userName
     });
-    var newUserObject = {
-        email: req.body.email,
-        password: req.body.password,
-        displayUserName: req.body.userName
-    }
-    console.log(req.body, 'newUser')
+
     newUser.save(function (err, dataSaved) {
         if (err) {
             res.send(err);
@@ -132,7 +129,9 @@ app.post('/updateTodo', function (req, res, next) {
 
 app.get('/dummyAPI', function (req, res, next) {
     console.log('request')
-    res.text('hello world');
+    // res.send('hello world');
+
+    res.json({ userName: 'haider', rollNumber: '2643' });
 })
 
 
