@@ -9,7 +9,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "expo": "^31.0.2",
+    "expo": "^46.0.16",
     "expo-camera": "^6.0.0",
     "expo-permissions": "^6.0.0",
     "react": "16.5.0",
